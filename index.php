@@ -100,24 +100,26 @@ $questions = [
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel='stylesheet' href='dist/app.css'>
     <title>F.A.Q</title>
 </head>
 <body>
 
     <div class="container">
-    <?php foreach( $questions as $singleQuest) { ?>
+        <?php foreach( $questions as $singleQuest) { ?>
 
-        <h2><?php echo $singleQuest["question"]; ?></h2>
-        <div class="answer">
-            <?php $edited = explode("♪", $singleQuest["answer"]);
-            foreach($edited as $el) {    
-            echo $el;    
-            ?>
-        </div>
+            <h2><?php echo $singleQuest["question"]; ?></h2>
+            <div class="answer">
+                <?php 
+                    $edited = explode("♪", $singleQuest["answer"]);
+                    foreach ($edited as $el) {
+                        echo $el . '<br/>';
+                    }
+                ?>
+            </div>
+            
 
-    <?php }} ?>
-
-
+        <?php } ?>
     </div>
     
 </body>
