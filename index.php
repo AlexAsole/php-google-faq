@@ -45,14 +45,14 @@ $questions = [
     ],
     [
         "question" => "Perché il mio account è associato a un paese?",
-        "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
+        "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:♪
         <ol><li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi 
         sulla privacy vigenti. 
-        Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+        Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:♪
         <ol><li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo 
-        (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
-        <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></ol></li>
-        <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol>
+        (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>♪
+        <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></ol></li>♪
+        <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol>♪
         Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li 
         offre o dal paese a cui è associato il tuo account."
     ],
@@ -105,6 +105,29 @@ $questions = [
 </head>
 <body>
 
+
+    <div class="navbar">
+        <div class="navbar-up">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+                <span>Privacy e termini</span>
+            </div>
+            <div class="user">
+                <img src="img/user.png" alt="">
+            </div>
+        </div>
+        <div class="navbar-down">
+            <ul>
+                <li>Introduzione</li>
+                <li>Norme sulla privacy</li>
+                <li>Termini di servizio</li>
+                <li>Tecnologie</li>
+                <li>Domande frequenti</li>
+            </ul>
+        
+        </div>
+    </div>
+
     <div class="container">
         <?php foreach( $questions as $singleQuest) { ?>
 
@@ -113,7 +136,7 @@ $questions = [
                 <?php 
                     $edited = explode("♪", $singleQuest["answer"]);
                     foreach ($edited as $el) {
-                        echo $el . '<br/>';
+                        echo $el . '<br/><br/>';
                     }
                 ?>
             </div>
